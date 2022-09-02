@@ -36,10 +36,10 @@ const show = $ref(false);
 
           <div className="vuemastery-modal-footer">
             <p className="vuemastery-modal-footer-text">
-              Watch our videos on
+              Regardez nos vidéos
               <a href="https://www.youtube.com/channel/UCllE-GsYy10RkxBUK0HIffw" target="_blank"
                 rel="sponsored noopener" title="Leaf PHP on YouTube">
-                our YouTube channel.</a>
+                sur notre chaîne YouTube.</a>
             </p>
           </div>
         </div>
