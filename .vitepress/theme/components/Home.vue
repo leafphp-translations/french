@@ -16,17 +16,17 @@ import VueMasteryModal from './VueMasteryModal.vue';
           <span class="accent">Leaf 3.0</span>
         </h1>
         <p class="description">
-          Simple and elegant PHP
+          PHP, simple et élégant
         </p>
         <p class="actions">
           <vue-mastery-modal />
           <a class="get-started" href="/docs/introduction/">
-            Get Started
+            Démarrez
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
               <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
             </svg>
           </a>
-          <a class="setup" href="/docs/introduction/installation.html">Install</a>
+          <a class="setup" href="/docs/introduction/installation.html">Installation</a>
         </p>
       </div>
     </div>
@@ -46,23 +46,23 @@ import VueMasteryModal from './VueMasteryModal.vue';
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>Approachable 👨🏾‍🏫</h2>
+      <h2>Accessible 👨🏾‍🏫</h2>
       <p>
-        Builds on top of standard PHP with a flexible learning curve + ZERO config.
+        S'appuie sur du PHP standard avec une courbe d'apprentissage souple et une configuration zéro.
       </p>
     </div>
     <div class="vt-box">
-      <h2>Versatile ☃️</h2>
+      <h2>Polyvalent ☃️</h2>
       <p>
-        A rich, incrementally adoptable ecosystem of modules to build powerful apps with.
+        Un écosystème de modules pouvant être ajoutés au fur et à mesure afin de créer des applications puissantes.
       </p>
     </div>
     <div class="vt-box">
-      <h2>Efficient ⏰</h2>
+      <h2>Efficace ⏰</h2>
       <p>
-        Blazing Fast <br>
-        &lsaquo;40KB Source <br>
-        Crazy development time </p>
+        Rapide comme l'éclair !<br>
+        Moins de 40KB <br>
+        Temps de développement minime </p>
     </div>
   </section>
 
@@ -70,7 +70,7 @@ import VueMasteryModal from './VueMasteryModal.vue';
     <h2>Sponsors</h2>
     <SponsorsGroup tier="sponsor" showLabel placement="landing" />
 
-    <h2>Code Contributors</h2>
+    <h2>Contributeurs</h2>
     <SponsorsGroup tier="code" showLabel placement="landing" />
   </section>
 
@@ -92,13 +92,13 @@ import VueMasteryModal from './VueMasteryModal.vue';
         </div>
 
         <div class="w:100">
-          <h2 class="chakra-heading css-1c75i90">Connect with the community</h2>
-          <p class="discord-subtext">Ask questions, report issues, and meet new people.</p>
+          <h2 class="chakra-heading css-1c75i90">Connectez-vous à la communauté</h2>
+          <p class="discord-subtext">Posez vos questions, signaler des erreurs, rencontrez du monde.</p>
         </div>
       </div>
 
       <a href="https://discord.gg/Pkrm9NJPE3" rel="noopener" target="_blank" class="join-button mt-xs:_3 w-xs:100 flex flex:center-all">
-        Join Discord!
+        Rejoindre sur Discord !
       </a>
     </div>
   </section>
