@@ -76,16 +76,16 @@ function useToggleFn(
   <div v-if="show" class="preference-switch">
     <button class="toggle" aria-label="preference switches toggle" aria-controls="preference-switches"
       :aria-expanded="isOpen" @click="toggleOpen" @mousedown="removeOutline" @blur="restoreOutline">
-      <span>Style Preference</span>
+      <span>Préférence de style</span>
       <VTIconChevronDown class="vt-link-icon" :class="{ open: isOpen }" />
     </button>
     <div id="preference-switches" :hidden="!isOpen" :aria-hidden="!isOpen">
       <div class="switch-container">
-        <label class="options-label w:_10" @click="toggleFunctionalMode(false)">Class Mode</label>
+        <label class="options-label w:_10" @click="toggleFunctionalMode(false)">Mode Classe</label>
         <VTSwitch class="api-switch" aria-label="prefer functional mode" :aria-checked="preferFunctional"
           @click="toggleFunctionalMode()" />
-        <label class="composition-label" @click="toggleFunctionalMode(true)">{{ showFullText ? 'Functional' : 'Fn' }}
-          Mode</label>
+        <label class="composition-label" @click="toggleFunctionalMode(true)">Mode {{ showFullText ? 'Fonctionnel' : 'Fn' }}
+          </label>
         <a class="switch-link" title="About API preference" href="/docs/introduction/#class-mode-vs-functional-mode"
           @click="closeSideBar">?</a>
       </div>
