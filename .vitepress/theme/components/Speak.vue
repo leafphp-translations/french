@@ -11,15 +11,15 @@
           </svg>
         </div>
       </div>
-      <h2 class="title">Invite us to speak at your next event</h2>
+      <h2 class="title">Invitez-nous à prendre la parole lors de votre prochain événement</h2>
       <p class="help">
-        Want a Leaf core team member to speak at your next event? Invite us to create a memorable and engaging
-        experience for your attendees.
+        Vous souhaitez qu'un membre de l'équipe de Leaf prenne la parole lors de votre prochain événement ? Invitez-nous à créer une
+        expérience mémorable et captivante pour vos participants.
       </p>
       <div class="flex flex:center-all">
         <a href="mailto:mickdd22@gmail.com?subject=Invitation to speak at our next event" rel="noopener" target="_blank"
           class="join-button mt:_3 w-xs:100 flex flex:center-all">
-          Reach out to us
+          Contactez-nous
         </a>
       </div>
     </div>
