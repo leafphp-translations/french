@@ -7,13 +7,13 @@ import { headerPlugin } from './headerMdPlugin'
 
 const nav = [
   {
-    text: 'Docs',
+    text: 'Documentation',
     activeMatch: `^/(docs|style-guide|examples|tutorial)/`,
     items: [
-      { text: 'Guide', link: '/docs/introduction/' },
-      { text: 'Tutorial', link: '/tutorial/' },
+      { text: 'Manuel', link: '/docs/introduction/' },
+      { text: 'Tutoriel', link: '/tutorial/' },
       {
-        text: 'Migration from Leaf 2',
+        text: 'Migration depuis Leaf 2',
         link: '/docs/migration/introduction'
       },
       {
@@ -21,17 +21,17 @@ const nav = [
         link: 'https://codelabs.leafphp.dev'
       },
       {
-        text: 'Leaf 2 Docs',
+        text: 'Documentation Leaf 2',
         link: 'https://archive.leafphp.dev'
       },
     ]
   },
   {
-    text: 'Ecosystem',
+    text: 'Écosystème',
     activeMatch: `^/ecosystem/`,
     items: [
       {
-        text: 'Core Projects',
+        text: 'Projets de base',
         items: [
           {
             text: 'Leaf Modules',
@@ -52,8 +52,8 @@ const nav = [
         ]
       },
       {
-        text: 'Tooling',
-        ariaLabel: 'Tooling Menu',
+        text: 'Outils',
+        ariaLabel: 'Menu Outils',
         items: [
           {
             text: 'Aloe CLI',
@@ -72,19 +72,19 @@ const nav = [
     ]
   },
   {
-    text: 'Community',
+    text: 'Communauté',
     activeMatch: `^/(about|community)/`,
     items: [
       {
-        text: 'Community',
-        ariaLabel: 'Community Menu',
+        text: 'Communauté',
+        ariaLabel: 'Menu Communauté',
         items: [
           {
-            text: 'Contribute to Leaf',
+            text: 'Contribuer à Leaf',
             link: '/community/contributing/'
           },
           {
-            text: 'Contribute to docs',
+            text: 'Contribuer à la doc',
             link: '/community/contributing/writing-guide'
           },
           {
@@ -92,11 +92,11 @@ const nav = [
             link: 'https://blog.leafphp.dev'
           },
           {
-            text: 'Team',
+            text: 'Équipe',
             link: '/community/team'
           },
           {
-            text: 'Join',
+            text: 'Nous rejoindre',
             link: '/community/join'
           },
           {
@@ -106,11 +106,11 @@ const nav = [
         ]
       },
       {
-        text: 'Help',
-        ariaLabel: 'Help Menu',
+        text: 'Aide',
+        ariaLabel: 'Menu Aide',
         items: [
           {
-            text: 'Leaf Forum',
+            text: 'Forum Leaf',
             link: 'https://github.com/leafsphp/leaf/discussions/37'
           },
           {
@@ -130,7 +130,7 @@ const nav = [
     ]
   },
   {
-    text: 'Support Leaf',
+    text: 'Soutenir Leaf',
     link: '/support/'
   }
   // {
