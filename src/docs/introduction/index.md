@@ -1,52 +1,52 @@
 <!-- markdownlint-disable no-inline-html -->
 # Introduction
 
-::: tip ⚡️ Official Release
-This is the documentation for Leaf v3.0.
+::: tip ⚡️ Publication officielle
+Vous consultez la documentation de Leaf v3.0.
 
-- [**Leaf 2 docs**](https://archive.leafphp.dev)
-- [**Leaf 1 docs**](https://v1.leafphp.dev)
+- [**Documentation de Leaf 2**](https://archive.leafphp.dev)
+- [**Documentation de Leaf 1**](https://v1.leafphp.dev)
 :::
 
 <script setup>
 import VideoDocs from '/@theme/components/VideoDocs.vue'
 </script>
 
-## What is Leaf PHP?
+## Leaf PHP, c'est quoi ?
 
-Leaf is a slim and lightweight PHP framework for quickly bootstrapping clean, simple, but powerful web apps and APIs quickly and easily. Over the years, we've been focusing on delivering much simpler and more performant code, which can be used in all your PHP apps.
+Leaf est un framework PHP minimal et léger qui permet de démarrer rapidement et facilement des applications web et des API propres, simples, mais puissantes. Au fil des années, nous nous sommes attachés à fournir un code plus simple et plus performant, qui peut être utilisé dans toutes vos applications PHP.
 
-Version 3 of Leaf brings more to the table with a theme centring on developer experience and usability, but with all the goodies while ensuring users have the best experience as well.
+La version 3 de Leaf apporte un thème centré sur l'expérience des développeurs et l'ergonomie, mais avec plein de fonctionnalités tout en veillant à ce que les utilisateurs bénéficient également de la meilleure expérience possible.
 
-[→ Checkout Leaf 3's features](/docs/introduction/features)
+[→ Découvrez les fonctionnalités de Leaf 3](/docs/introduction/features)
 
-## Getting Started
+## Pour commencer
 
-The official guide assumes **basic** level knowledge of PHP.
+Ce guide nécessite un niveau **basique** de PHP.
 
-::: warning 😵‍💫 Don't know PHP?
-If you are not familiar with PHP, we recommend that you check out the [W3Schools PHP Tutorial](https://www.w3schools.com/php/default.asp) before continuing. This is because you will basically be writing PHP code when using Leaf (or any other framework).
+::: warning 😵‍💫 Vous ne connaissez pas PHP ?
+Si vous n'êtes pas familier avec PHP, nous vous recommandons de consulter le site web [W3Schools PHP Tutorial](https://www.w3schools.com/php/default.asp) avant de continuer. En effet, en utilisant Leaf (ou n'importe quel autre framework), vous écrirez essentiellement du code PHP.
 :::
 
 ### Installation
 
 <VideoDocs
-  subject="Watch the leaf 3 installation walkthrough"
-  description="Throughout the leaf documentation, you will see video links like the one just below. If you are a visual learner, this gives you another way to follow along with our documentation. We call these the video docs."
+  subject="Regardez la démo de l'installation de Leaf 3"
+  description="Tout au long de la documentation sur Leaf, vous verrez des liens vidéo comme celui qui figure ci-dessous. Si vous êtes un apprenant visuel, cela vous donne un autre moyen de suivre notre documentation. Nous les appelons les VideoDocs."
   link="https://www.youtube.com/embed/PuOk5xqTIsA"
 />
 
-To quickly get started with Leaf, check out our [installation guide](/docs/introduction/installation.html). This gives you an in-depth explanation of how to set up leaf using various methods.
+Pour démarrer rapidement avec Leaf, consultez notre [guide d'installation](/docs/introduction/installation.html). Vous y trouverez une explication approfondie pour configurer Leaf à l'aide de différentes méthodes.
 
-::: tip Migrating
-Already know Leaf 2 and just want to learn about what's new in Leaf 3? Check out the [Migration Guide](/docs/migration/introduction.html)!
+::: tip Migration
+Vous connaissez déjà Leaf 2 et vous voulez juste vous rencarder sur les nouveautés de Leaf 3 ? Regardez le [guide de migration](/docs/migration/introduction.html) !
 :::
 
-Below is a hello world example which takes you through the core of Leaf. Other parts of the docs cover deeper examples. You can also refer to our [codelab experiments](https://codelabs.leafphp.dev) for real world examples and use-cases.
+Ci-dessous, un exemple de type "hello world" qui vous permettra de découvrir le cœur de Leaf. Les autres parties de la documentation couvrent des exemples plus approfondis. Vous pouvez également consulter nos [expériences codelab](https://codelabs.leafphp.dev) pour des exemples réels et des cas d'utilisation.
 
-## Hello world example
+## Exemple avec "Hello world"
 
-At the core of Leaf PHP is a system that enables us to declaratively define applications using a friendly and straight-forward syntax:
+Au cœur de Leaf PHP se trouve un système qui nous permet de définir des applications de manière déclarative en utilisant une syntaxe agréable et simple :
 
 **index.php:**
 
@@ -84,9 +84,9 @@ app()->run();
 
 </div>
 
-We have already created our very first Leaf app! This is as simple as it gets.
+Nous avons déjà créé notre toute première application Leaf ! C'est aussi simple que ça.
 
-In addition, we can output data with Leaf response. This is a module that allows us to output data of various types without any hassle.
+En outre, nous pouvons afficher des données avec la réponse de Leaf. Il s'agit d'un module qui nous permet d'afficher des données de différents types sans aucun souci.
 
 <div class="class-mode">
 
@@ -104,7 +104,7 @@ $app->get('/', function () use($app) {
 $app->run();
 ```
 
-Now you might be wondering why we need to go through all of this just to return some HTML when we can just use echo. The reason for this is simple. `Response` takes care of a lot of issues for us under the hood and renders exactly what we expect. Let's look at an example below.
+Alors, vous vous demandez peut-être pourquoi nous devons passer par tout cela juste pour retourner du HTML, tandis que nous pouvons simplement utiliser echo. La raison est simple. `Response` s'occupe de beaucoup de choses pour nous sous le capot et renvoie exactement ce que nous attendons. Regardons un exemple ci-dessous.
 
 </div>
 <div class="functional-mode">
@@ -121,7 +121,7 @@ app()->get('/', function () {
 app()->run();
 ```
 
-We use `response` here instead of `echo` because it takes care of a lot of issues for us under the hood and renders exactly what we expect. Let's look at an example below.
+Ici, nous utilisons `response` au lieu de `echo` car il s'occupe de beaucoup de choses pour nous sous le capot et renvoie exactement ce que nous attendons. Regardons un exemple ci-dessous.
 
 </div>
 
@@ -165,19 +165,19 @@ app()->run();
 
 </div>
 
-When we run this, we get "\<b>Hello world\</b>" instead of **Hello World**
+Lorsque nous exécutons cette commande, nous obtenons "\<b>Hello world\</b>" au lieu de **Hello World**.
 
-Unlike the confusion above between the content type and echo, Leaf response makes sure that whatever content we're trying to render is reflected in the content type. This is just one of the many things that response takes care of automatically.
+Contrairement à la confusion ci-dessus entre le type de contenu et echo, la `response` de Leaf s'assure que peu importe le contenu que nous essayons d'afficher, il est reflété dans le type de contenu. Ce n'est qu'une des nombreuses choses dont la `response` s'occupe automatiquement.
 
-## Functional Mode
+## Mode Fonctionnel
 
-We have mostly talked about general features that are the same even in Leaf 2, so let's talk about some spice in Leaf 3.
+Nous avons surtout parlé des caractéristiques générales qui sont les mêmes que dans Leaf 2, parlons maintenant de quelques fraicheurs de Leaf 3.
 
 ::: tip
-This is just an introduction to functional mode. Read the [functional mode documentation](/docs/tooling/functions.html) for the full explanation.
+Ceci est seulement une introduction au mode fonctionnel. Lisez la [documentation du mode fonctionnel](/docs/tooling/functions.html) pour en savoir plus.
 :::
 
-Basically, leaf 3 comes with global helper functions that take away the only pain anyone has ever had in using leaf, i.e., long namespaces and class initializers. Let's rewrite the first example in functional mode.
+En fait, Leaf 3 est livré avec des fonctions d'aide globales qui suppriment la seule difficulté que l'on ait jamais rencontrée dans l'utilisation de Leaf, c'est-à-dire les longs espaces de noms et les initialiseurs de classes. Réécrivons le premier exemple "Hello world" en mode fonctionnel.
 
 ```php
 <?php
@@ -191,15 +191,15 @@ app()->get('/', function () {
 app()->run();
 ```
 
-You'll notice that we've gotten rid of the lengthy `use Leaf\Http\Response;` and even the leaf initializer. Leaf 3 helps you focus on only what matters: your application. Everything is either done for you under the hood or made available to you in easy-to-use tools.
+Vous remarquerez que l'on s'est débarrassé du long `use Leaf\Http\Response;` et même de l'initialiseur de Leaf. Leaf 3 vous aide à vous concentrer sur ce qui est important : votre application. Tout est fait pour vous sous le capot, ou bien mis à votre disposition dans des outils faciles à utiliser.
 
-### Handling User Input
+### Manipuler les entrées utilisateur
 
-One very important part of building web apps/APIs is user input. Users may pass data into your leaf app through forms, http request bodies, URLs, ...
+Une partie très importante de la construction d'applications web ou API est l'entrée des utilisateurs. Les utilisateurs peuvent transmettre des données à votre application par le biais de formulaires, de requêtes HTTP, d'URL, etc.
 
-You must read this data and make sure it can't harm your system before performing any operations on it. This can be very clumsy when done raw with PHP, especially when the data comes in through multiple channels. Leaf has, however, prepared a simple handler for this: `Leaf\Http\Request`. Since we are using functional mode, we will use the `request` method instead of this lengthy class.
+Vous devez lire ces données et vous assurer qu'elles ne peuvent pas nuire à votre système avant d'effectuer toute opération sur ces dernières. Cette opération peut être très délicate lorsqu'elle est effectuée avec du PHP brut, surtout lorsque les données arrivent par plusieurs canaux. Leaf a cependant préparé un gestionnaire simple pour cela : `Leaf\Http\Request`. Puisque nous utilisons le mode fonctionnel, nous allons simplement employer la méthode `request` au lieu de cette longue classe.
 
-The user navigates to /?greeting=hello%20world
+L'utilisateur navigue à l'adresse **/?greeting=hello%20world**
 
 ```php
 <?php
@@ -207,10 +207,10 @@ The user navigates to /?greeting=hello%20world
 require __DIR__ . '/vendor/autoload.php';
 
 app()->get('/', function () {
-  // we can get the GET request data from the URL like this
+  // nous obtenons comme ceci les données de la requête en GET depuis l'URL
   $greeting = request()->get('greeting'); // hello world
 
-  // output json encoded data
+  // données encodées en json
   response()->json([
     'greeting' => $greeting
   ]);
@@ -219,18 +219,18 @@ app()->get('/', function () {
 app()->run();
 ```
 
-The most beautiful thing about the request object is that all data passed into your app is automatically sanitized to prevent attacks like XSS. You have simple and safe code working for you.
+Ce qui est magnifique avec l'objet `request`, c'est que toutes les données transmises à votre application sont automatiquement nettoyées pour éviter les attaques (telles que les attaques XSS). Vous avez un code simple et sûr qui travaille pour vous.
 
-## Class mode vs Functional mode
+## Mode Classe vs Mode Fonctionnel
 
-Leaf supports two different ways of writing your code:
+Leaf vous autorise à écrire votre code de deux manières différentes :
 
-- Using functional mode which you saw above
-- Using class mode which is what has been used since Leaf v1
+- Utiliser le mode fonctionnel, comme vous avez pu voir juste au-dessus
+- Utiliser le mode classe, qui est utilisé depuis la première version de Leaf
 
-### Class Mode
+### Mode Classe
 
-This method is the default for most frameworks. Since leaf comes with classes, you can entirely build your aplication using those classes. like the `Leaf\Http\Response` class.
+C'est le mode par défaut pour la plupart des frameworks. Étant donné que Leaf est livré avec des classes, vous pouvez tout à fait construire votre application en utilisant ces classes. Comme la classe `Leaf\Http\Response`, par exemple.
 
 ```php
 <?php
@@ -246,9 +246,9 @@ $app->get("/", function () {
 $app->run();
 ```
 
-### Functional Mode
+### Mode Fonctionnel
 
-Classes become annoying to use and repeat, especially because of namespaces. You also sometimes need to put the instance of a class into a function's scope with `use`. Getting the particular instance of a class can be difficult which sometimes leads to reinitializing the class. For these reasons (and more), we created scopeless functions which allow you to quickly build your applications. These functions return instances of Leaf's classes so you don't need to use the classes yourself.
+Il est assez ennuyeux d'utiliser des classes, et de se répéter, principalement à cause des espaces de noms. Vous avez aussi parfois besoin de mettre l'instance d'une classe dans la portée d'une fonction avec `use`. Obtenir l'instance particulière d'une classe peut être difficile, ce qui conduit parfois à réinitialiser la classe. Pour ces raisons (et d'autres), nous avons créé des fonctions sans portée qui vous permettent de construire rapidement vos applications. Ces fonctions renvoient des instances des classes appartenant à Leaf afin que vous n'ayez pas besoin d'utiliser ces classes vous-même.
 
 ```php
 <?php
@@ -262,37 +262,37 @@ app()->get("/", function () {
 app()->run();
 ```
 
-## Modes in the docs
+## Modes dans la documentation
 
-Just as leaf allows you to write your code in 2 ways, with functional mode or class mode, our docs come with examples prepared for both.
+Tout comme Leaf vous permet d'écrire votre code de 2 façons, avec le mode fonctionnel ou le mode classe, les exemples de la documentation peuvent être affichés pour ces deux modes.
 
-You can click on this switch in the sidebar to toggle the mode of the examples on our documentation.
+Vous pouvez cliquer sur les liens dans la barre latérale pour basculer les exemples de la documentation d'un mode à l'autre.
 
 ![Switcher](https://user-images.githubusercontent.com/26604242/178108346-c9c22a19-6a82-4786-ac3e-00cbfe69cba8.png)
 
-## Installing modules
+## Installer des modules
 
-Modules are pieces of functionality that have been packaged and shipped separately from the Leaf core. Modules are used to extend Leaf's reach by performing operations not available on the core. Modules were introduced with Leaf 3, but some of them can be used with earlier versions of Leaf. Modules can also be used in external libraries and frameworks as well. To install a module, simply run its install script with composer or use the leaf CLI.
+Les modules sont des packages de fonctionnalité qui ont été créé séparément du noyau de Leaf. Les modules sont utilisés pour étendre les possibilités de Leaf, permettant des opérations non possibles avec Leaf "de base". Les modules ont fait leur apparition avec Leaf 3, mais certains d'entre eux peuvent être utilisés sur d'anciennes versions de Leaf. Ces modules peuvent très bien être utilisés pour des librairies ou sur des frameworks externes. Pour installer un module, exécutez son script d'installation avec Composer, ou bien utilisez Leaf CLI.
 
-To demonstrate this, we will expand the app above to output a template instead of the JSON data from earlier. For this, we will need a template module. Leaf has 3 template modules
+Pour vous le montrer, nous allons faire en sorte que l'application retourne un template et plus des données JSON comme précédemment. Pour cela, nous allons avoir besoin d'un module de template. Leaf en possède 3.
 
-- BareUI: Super lightweight, blazing fast templating engine with zero compilation
-- Blade: A port of the laravel blade templating engine
-- Leaf Veins: Lightweight but powerful templating
+- BareUI : très léger, templating engine hyper rapide avec aucune compilation
+- Blade : tiré du templating engine du célèbre framework Laravel
+- Leaf Veins : templating engine léger mais puissant
 
-For this demo, we will use BareUI. We can install BareUI with leaf CLI.
+Pour cette démo, nous allons utiliser BareUI que nous installerons avec Leaf CLI.
 
 ```sh
 leaf install bareui
 ```
 
-Or with composer:
+Ou avec Composer:
 
 ```sh
 composer require leafs/bareui
 ```
 
-After this, Leaf **automatically** links the BareUI class for you and makes it available on the leaf object as `template`. So from there, we can create our template. I'll name this `index.view.php` (BareUI templates end in `.view.php`)
+Après cela, Leaf va **automatiquement** relier pour vous les classes propres à BareUI et les rendre disponibles en tant que `template`. Maintenant, nous pouvons créer notre template. Appelons-le `index.view.php` (les templates BareUI se terminent par `.view.php`)
 
 ```php
 <!DOCTYPE html>
@@ -309,7 +309,7 @@ After this, Leaf **automatically** links the BareUI class for you and makes it a
 </html>
 ```
 
-The next thing to do is to tell BareUI where to look for templates and finally render `index.view.php`.
+La prochaine chose à faire est de dire à BareUI où sont stockés nos templates, puis enfin retourner `index.view.php`.
 
 <div class="class-mode">
 
@@ -320,14 +320,14 @@ require __DIR__ . "/vendor/autoload.php";
 
 $app = new Leaf\App();
 
-// point to the templates directory
+// définissons le chemin d'accès aux templates
 $app->template->config("path", "./");
 
 $app->get("/", function () use($app) {
-  // we can get the GET request data from the URL like this
+  // nous obtenons comme ceci les données de la requête en GET depuis l'URL
   $greeting = $app->request()->get("greeting"); // hello world
 
-  // render our template
+  // renvoyons notre template
   echo $app->template->render("index", [
     "greeting" => $greeting,
   ]);
@@ -344,14 +344,14 @@ $app->run();
 
 require __DIR__ . "/vendor/autoload.php";
 
-// point to the templates directory
+// définissons le chemin d'accès aux templates
 app()->template->config("path", "./");
 
 app()->get("/", function () {
-  // we can get the GET request data from the URL like this
+  // nous obtenons comme ceci les données de la requête en GET depuis l'URL
   $greeting = request()->get("greeting"); // hello world
 
-  // render our template
+  // renvoyons notre template
   echo app()->template->render("index", [
     "greeting" => $greeting,
   ]);
@@ -362,27 +362,27 @@ app()->run();
 
 </div>
 
-Just as you saw above, most Leaf modules require absolutely no configuration in order to work with the Leaf core. They just fit right in.
+Comme vous pouvez le voir ci-dessus, la plupart des modules Leaf ne nécessitent absolument aucune configuration pour fonctionner avec le noyau Leaf. Ils s'intègrent, tout simplement.
 
-## Ready for More?
+## Vous en voulez plus ?
 
-We've briefly introduced the most basic features of Leaf 3 - the rest of this guide will cover them and other advanced features in much finer detail, so make sure to read through it!
+Nous avons brièvement présenté les fonctions les plus basiques de Leaf 3 - le reste de ce guide les reprendra, ainsi que d'autres fonctions plus avancées, de manière beaucoup plus détaillée, alors, assurez-vous d'en faire connaissance !
 
-## Next Steps
+## Prochaines étapes
 
-If you skipped the [Introduction](/guide/introduction), we strongly recommend reading it before moving on to the rest of the documentation.
+Si vous avez sauté [l'introduction](/guide/introduction), nous vous recommandons fortement de la lire avant de passer à la suite.
 
 <div class="vt-box-container next-steps">
   <a class="vt-box" href="/docs/introduction/installation">
-    <h3 class="next-steps-link">Continue the Guide</h3>
-    <small class="next-steps-caption">The guide walks you through every aspect of the framework in full details.</small>
+    <h3 class="next-steps-link">Continuer le Guide</h3>
+    <small class="next-steps-caption">Le guide vous accompagnera à travers tous les aspects du framework, dans tous les détails.</small>
   </a>
   <a class="vt-box" href="/docs/introduction/first-app">
-    <h3 class="next-steps-link">Follow the Tutorial</h3>
-    <small class="next-steps-caption">For those who prefer learning things hands-on. Let's build something real!</small>
+    <h3 class="next-steps-link">Suivre le tutoriel</h3>
+    <small class="next-steps-caption">Pour ceux qui préfèrent apprendre les choses par la pratique. Construisez quelque chose de réel !</small>
   </a>
   <a class="vt-box" href="https://codelabs.leafphp.dev" target="_blank">
-    <h3 class="next-steps-link">Check out CodeLabs</h3>
-    <small class="next-steps-caption">Codelabs provides interactive tutorials with in-depth explanations.</small>
+    <h3 class="next-steps-link">Découvrez CodeLabs</h3>
+    <small class="next-steps-caption">Codelabs fournit des didacticiels interactifs avec des explications approfondies.</small>
   </a>
 </div>
