@@ -2,38 +2,38 @@
 aside: none
 ---
 
-# Features
+# Fonctionnalités
 
-Leaf has a ton of features which help provide the best developer experience without sacrificing any power. Leaf 3 makes these features even more usable. These are some of leaf's features:
+Leaf possède une tonne de fonctionnalités offrant aux développeurs la meilleure expérience possible, sans sacrifier la puissance. La version 3 de Leaf rend ces fonctionnalités encore plus utilisables. En voici quelques-unes :
 
-## Low barrier to entry
+## Démarrage sans obstacle
 
-Leaf is the easiest framework to learn with PHP newbies building powerful leaf apps in a few minutes of reading the docs/watching out tutorial videos. All you truly need to get started with Leaf is basic PHP knowledge and optional but recommended knowledge on some backend concepts like JWT auth and more.
+Leaf est le framework le plus facile à apprendre. Les débutants en PHP peuvent créer de puissantes applications Leaf en quelques minutes après avoir lu la documentation ou regardé les vidéos du tutoriel. Tout ce dont vous avez vraiment besoin pour démarrer avec Leaf, c'est d'une connaissance de base de PHP ainsi que d'une connaissance optionnelle (mais recommandée) de certains concepts backend comme l'authentification JWT et plus encore.
 
-## Lightweight
+## Léger
 
-Leaf 2 was lightweight and fast enough to be considered one of the most lightweight but powerful frameworks around, and Leaf 3 makes leaf 2 look like a joke. Leaf 3 can now be considered the most lightweight PHP framework with a source of about 30kb and allows you to build full apps and APIs which end up less than 20mb including user dependencies (leaf api). This is a big haul compared to other frameworks which require dependencies and tons of files which end up more than 100mb.
+Leaf 2 était suffisamment léger et rapide pour être considéré comme l'un des frameworks les plus petits mais puissants, et Leaf 3 fait désormais passer Leaf 2 pour une blague. Leaf 3 peut maintenant être considéré comme le framework PHP le plus léger avec un code source d'environ 30KB, vous permettant de construire des applications complètes et des API qui finissent par faire moins de 20MB, en incluant les dépendances utilisateur (leaf api). C'est une grande avancée par rapport à d'autres frameworks qui nécessitent des dépendances et des tonnes de fichiers, atteignant parfois plus de 100MB.
 
 ![image](https://user-images.githubusercontent.com/26604242/146754044-4c71c4ec-7b37-4c85-9c8b-56e8c2b54831.png)
 
-> a comparism with slim - slim (left) - leaf (right)
+> une comparaison avec Slim (à gauche) - Leaf (à droite)
 
-## Enables high developer productivity
+## Grande productivité pour les développeurs
 
-A whole lot of research and testing has been done to build amazing features which allow developers to focus on only what they need: their apps. Leaf 3 has put tons of strategies together to create the best developer experience known to PHP. From things like removing class initializers and creating global functions which allow you call classes from anywhere in your application, modules and other amazing leaf features.
+Un grand nombre de recherches et de tests ont été effectués pour créer les fonctionnalités étonnantes qui permettent aux développeurs de se concentrer uniquement sur ce dont ils ont besoin : leurs applications. Leaf 3 a mis en place des tonnes de stratégies pour créer la meilleure expérience de développement connue de PHP. Des choses comme la suppression des initialisateurs de classe et la création de fonctions globales qui vous permettent d'appeler des classes de n'importe où dans votre application, des modules et d'autres fonctionnalités étonnantes de Leaf.
 
-## Powered by [modules](/modules/)
+## Puissance des [modules](/modules/)
 
-Leaf 3 and its ecosystem are heavily powered by modules, which are simply pieces of leaf's functionality shipped into independently installable libraries. Modules help make leaf even more lightweight and help developers only deal with features which they need in their applications. This means that you only install what you need.
+Leaf 3 et son écosystème sont fortement alimentés par des modules, qui sont simplement des morceaux de fonctionnalités de Leaf, expédiés dans des bibliothèques installables indépendamment. Les modules contribuent à rendre Leaf encore plus léger et permettent aux développeurs de ne s'occuper que des fonctionnalités dont ils ont besoin dans leurs applications. Cela signifie que vous n'installez que ce dont vous avez besoin.
 
-## Easy to use features
+## Fonctionnalités faciles à utiliser
 
-As mentioned above, a lot of research has gone into the developer experience for leaf 3 and one aspect was to make our existing features more performant and easier to use. We employed various strategies like modeling some features after popular libraries in other languages and frameworks. For instance, the API for leaf cors is almost an exact replica of the expressjs cors middleware.
+Comme nous l'avons mentionné plus haut, de nombreuses recherches ont été consacrées à l'expérience du développeur pour Leaf 3 et l'un des aspects consistait à rendre nos fonctionnalités existantes plus performantes et plus faciles à utiliser. Nous avons employé diverses stratégies, comme le façonnage de certaines fonctionnalités basées sur des bibliothèques populaires d'autres langages et frameworks. Par exemple, l'API de Leaf CORS est une réplique presque exacte du middleware ExpressJS CORS.
 
-## Library/Framework compatibility
+## Compatibilité des Libraries/Frameworks
 
-Since the beginning of Leaf, we've set out to create code which could easily be integrated with other libraries and frameworks. No matter how powerful leaf is, we try to base of everything we do on simple concepts as opposed to other frameworks which need things like providers in order to access framework features in libraries.
+Depuis le début de Leaf, nous avons cherché à créer un code qui pourrait facilement être intégré à d'autres bibliothèques et frameworks. Quelle que soit la puissance de Leaf, nous essayons de baser tout ce que nous faisons sur des concepts simples, contrairement à d'autres frameworks qui ont besoin de choses comme des providers afin d'accéder aux fonctionnalités du framework au sein de bibliothèques.
 
-## Scalability
+## Scalabilité
 
-One of the most beautiful things about leaf is that, no matter what package you're using with leaf, if it works in development, it will definitely work in production with near zero config, unless you want some special features. Leaf provides a core and other frameworks/libraries that build around leaf. This makes leaf appropriate for almost any project no matter it's size.
+L'une des plus belles choses de Leaf, c'est que, quel que soit le package que vous utilisez, s'il fonctionne en développement, il fonctionnera certainement en production avec quasiment aucune configuration, à moins que vous ne souhaitiez des fonctionnalités spéciales. Leaf fournit un noyau et d'autres frameworks/librairies se construisant autour. Cela rend Leaf approprié pour presque tous les projets, peu importe leur taille.
