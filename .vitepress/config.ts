@@ -142,14 +142,14 @@ const nav = [
 
 const mainSidebar = [
   {
-    text: 'Essentials',
+    text: 'Les fondamentaux',
     items: [
-      { text: 'Introduction', link: '/docs/introduction/' },
-      { text: 'Features', link: '/docs/introduction/features' }
+      { text: 'Présentation', link: '/docs/introduction/' },
+      { text: 'Fonctionnalités', link: '/docs/introduction/features' }
     ]
   },
   {
-    text: 'Quick Start',
+    text: 'Pour démarrer',
     items: [
       { text: 'Installation', link: '/docs/introduction/installation' },
       { text: 'Migration Guide', link: '/docs/migration/introduction' },
