@@ -6,50 +6,50 @@
 import VideoDocs from '/@theme/components/VideoDocs.vue'
 </script>
 
-::: tip Leaf 3 release 🎊
-The official leaf 3 release candidate has been released.
+::: tip Lancement de Leaf 3 🎊
+La version officielle de Leaf 3 release candidate est sortie
 :::
 
-Leaf 3 is built by design to be incrementally adoptable. This means that it can be integrated into a project multiple ways depending on the requirements.
+Leaf 3 a été conçu pour être adopté de manière incrémentielle. Cela signifie qu'il peut être intégré dans un projet de plusieurs façons, en fonction des besoins.
 
-There are four primary ways of adding Leaf PHP to a project:
+Il y a quatre façons principales d'ajouter le Leaf PHP à un projet :
 
-1. Use the [Leaf CLI](https://cli.leafphp.dev/) to scaffold a project [RECOMMENDED].
-2. Download leaf through composer
-3. Use [Leaf skeleton](https://leafphp.netlify.app/#/skeleton/v/2.0/) to quickstart your project
-4. Download the leaf repo
+1. Utiliser [Leaf CLI](https://cli.leafphp.dev/) pour monter un projet **[RECOMMANDÉ]**.
+2. Télécharger Leaf via Composer
+3. Utiliser [Leaf skeleton](https://leafphp.netlify.app/#/skeleton/v/2.0/) pour démarrer rapidement un projet
+4. Télécharger le dépôt Leaf
 
-::: tip Migrating
-If you want to migrate an existing Leaf 2 project, skip this and follow the [Migration Guide](/docs/migration/introduction.html)
+::: tip Migration
+Si vous voulez migrer un projet Leaf 2 existant, allez directement au [Guide de migration](/docs/migration/introduction.html)
 :::
 
-## Release Notes
+## Notes de version
 
-Latest version 3 release: ![Latest Stable Version](https://poser.pugx.org/leafs/leaf/v/stable)
+Dernière version de Leaf 3 : ![Version stable la plus récente](https://poser.pugx.org/leafs/leaf/v/stable)
 
-Detailed release notes this version available on [GitHub](https://github.com/leafsphp/leaf/releases/tag/v3.0).
+Notes détaillées à propos de cette version disponibles sur [GitHub](https://github.com/leafsphp/leaf/releases/tag/v3.0).
 
 ## Leaf CLI
 
 <VideoDocs
-  subject="Watch the leaf 3 installation walkthrough"
-  description="You can take a look at our leaf cli setup walkthrough on youtube."
+  subject="Regardez la procédure d'installation de Leaf 3"
+  description="Vous pouvez jeter un coup d'œil à l'installation d'un projet via Leaf CLI sur YouTube"
   link="https://www.youtube.com/embed/PuOk5xqTIsA"
 />
 
-Leaf provides an [official CLI](https://github.com/leafsphp/cli) for quickly creating and managing your Leaf applications. It takes just a few seconds to get up and running with your leaf app. See [the Leaf CLI docs](https://cli.leafphp.dev) for more details.
+Leaf fournit une [CLI officielle](https://github.com/leafsphp/cli) pour créer et gérer rapidement vos applications Leaf. Il suffit de quelques secondes pour être opérationnel avec votre application. Consultez la [documentation sur le CLI de Leaf](https://cli.leafphp.dev) pour plus de détails.
 
 ```sh
 leaf create <project-name> --v3
 ```
 
-You can also install modules using the following syntax:
+Pour installer des modules, utilisez cette syntaxe :
 
 ```sh
 leaf install cors
 ```
 
-You can then run your app using:
+Et pour lancer votre application Leaf :
 
 ```sh
 leaf serve
@@ -58,22 +58,22 @@ leaf serve
 ## Composer
 
 <!-- <VideoDocs
-  subject="Watch the composer setup on youtube"
-  description="Learn how to set up a leaf app with composer."
+  subject="Regardez l'installation via Composer sur YouTube"
+  description="Apprenez à installer Leaf 3 avec Composer"
   link="https://www.youtube.com/watch?v=t-pNURSTOKw"
 /> -->
 
-You can also set up a new leaf 3 project from scratch using composer:
+Vous pouvez également créer un nouveau projet Leaf 3 en utilisant Composer :
 
 ```sh
-# latest stable (v3)
+# Dernière version stable (v3)
 $ composer require leafs/leaf
 
-# version 3 dev
+# Version 3 dev
 $ composer require leafs/leaf dev-v3.x-dev
 ```
 
-After insalling Leaf, you need to create your index.php file which will be the entry point to your application.
+Après l'installation de Leaf, you allez devoir créer le fichier `index.php`, qui sera le point d'entrée de votre application.
 
 <div class="class-mode">
 
@@ -109,29 +109,29 @@ app()->run();
 
 </div>
 
-You might want to check out [URL rewriting](/docs/introduction/url-rewriting.html).
+Vous pourriez avoir envie de lire la partie concernant la [réécriture d'URL](/docs/introduction/url-rewriting.html).
 
 ## GitHub
 
 <!-- <VideoDocs
-  subject="Watch the github setup on youtube"
-  description="Learn how to set up a leaf app from the leaf codebase."
+  subject="Regardez l'installation via le dépôt GitHub"
+  description="Apprenez à configurer une application Leaf à partir de GitHub."
   link="https://www.youtube.com/watch?v=t-pNURSTOKw"
 /> -->
 
-You can also clone the leaf 3 branch.
+Vous pouvez aussi cloner le dépôt de Leaf 3.
 
-::: tip Setup
-You can directly download v3.x-dev here.
+::: tip Installation
+Obtenez la version v3.x-dev ici.
 
 <div style="margin-bottom: 30px;">
-  <a href="https://github.com/leafsphp/leaf/releases/latest">Download Repo</a>
+  <a href="https://github.com/leafsphp/leaf/releases/latest">Télécharger le dépôt</a>
 </div>
 :::
 
-After downloading repo, you need to create an autoloader.
+Après avoir téléchargé le dépôt, vous devez créer un autoloader.
 
-**Example autoloader: `autoloader.php`**
+**Exemple : `autoloader.php`**
 
 ```php
 <?php
@@ -144,11 +144,11 @@ spl_autoload_register(function ($class) {
 });
 ```
 
-The autoloader will allow you use leaf files without having to `require` or `include` them first. So straight up using `Leaf\App` will load `leaf\src\App.php`.
+L'autoloader vous permettra d'utiliser les fichiers Leaf sans avoir à les `require` ou les `include` au préalable. Ainsi, l'utilisation de `Leaf\App` chargera `leaf\src\App.php`.
 
-**This is only required if you downloaded the repo.**
+**Cette opération est requise seulement si vous téléchargez le dépôt.**
 
-Now, all you have to do is create your index.php file, install leaf's dependencies (core modules), and include your autoloader like this:
+Maintenant, tout ce que vous avez à faire est de créer votre fichier `index.php`, d'installer les dépendances de Leaf (modules de base) et d'inclure votre autoloader comme ceci :
 
 ```php
 <?php
@@ -157,8 +157,8 @@ require __DIR__ . "leaf/vendor/autoload.php";
 require __DIR__ . "autoloader.php";
 ```
 
-::: warning NOTE THAT
-functional mode is not automatically available if you go down this route, you will have to manually add the leaf functions file in your app or in the autoloader.
+::: warning Notez ceci
+Le mode fonctionnel n'est pas automatiquement disponible si vous suivez cette méthode d'installation. Pour se faire, vous devrez ajouter manuellement le fichier de fonctions Leaf dans votre application ou dans l'autoloader.
 :::
 
 ```php{5}
@@ -169,14 +169,14 @@ require __DIR__ . "autoloader.php";
 require __DIR__ . "leaf/src/functions.php";
 ```
 
-Although the setup for this method is a bit more complicated, it gives you full control over leaf and how it works since you will have access to the source code. You can directly edit leaf to behave the way you want it to. If you don't need this, we recommend that you install leaf with composer above or if you want a base setup, you can follow either of the methods below.
+Bien que cette méthode soit un peu plus compliquée, elle vous donne un contrôle total sur Leaf et son fonctionnement puisque vous aurez l'accès au code source. Vous pouvez directement modifier Leaf pour qu'il se comporte comme bon vous semble. Ceci dit, si ce n'est pas utile pour vous, nous vous recommandons d'installer Leaf avec Composer, ou si vous souhaitez une installation de base, vous pouvez suivre l'une des méthodes ci-dessous.
 
-## Leaf skeleton
+## Leaf Skeleton
 
-Leaf skeleton is an official leaf boilerplate that packs a default setup with optional MVC configuration and setup.
+Leaf Skeleton est un boilerplate officiel de Leaf qui contient une installation par défaut avec une configuration et une installation MVC optionnelles.
 
-::: warning NOTE
-Skeleton with Leaf 3 is also available on the leaf cli. You can quickly scaffold a skeleton 3 project with:
+::: warning Note
+Skeleton avec Leaf 3 est aussi disponible via Leaf CLI. Vous pouvez rapidement créer un projet Leaf Skeleton avec :
 
 ```sh
 leaf create <project-name> --skeleton --v3
@@ -184,7 +184,7 @@ leaf create <project-name> --skeleton --v3
 
 :::
 
-The main installtion for skeleton is through composer.
+La principale installation de Leaf Skeleton se fait via Composer :
 
 ```sh
 composer create-project leafs/skeleton <project-name>
