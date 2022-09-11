@@ -1,4 +1,4 @@
-# Migration Guide
+# Guide de migration
 
 <script setup>
 import VideoDocs from '/@theme/components/VideoDocs.vue'
@@ -10,15 +10,15 @@ import VideoDocs from '/@theme/components/VideoDocs.vue'
   link="https://www.youtube.com/embed/BTcUgeOZLyM"
 /> -->
 
-This guide is primarily for users with prior Leaf 2 experience who want to learn about the new features and changes in Leaf 3. **This is not something you have to read from top to bottom before trying out Leaf 3.** While it looks like a lot has changed, a lot of what you know and love about Leaf is still the same; but we wanted to be as thorough as possible and provide detailed explanations and examples for every documented change.
+Ce guide s'adresse principalement aux utilisateurs ayant déjà une expérience de Leaf 2 et qui souhaitent se familiariser avec les nouvelles fonctionnalités et les changements de Leaf 3. **Il ne s'agit pas d'un document que vous devez lire de bout en bout avant d'essayer Leaf 3**. Bien que beaucoup de choses semblent avoir changé, une grande partie de ce que vous connaissez et aimez dans Leaf est toujours la même. Nous avons voulu être aussi complets que possible et fournir des explications détaillées et des exemples pour chacun des changements.
 
-::: warning Coming from another library
-Migrating from another framework? [READ THIS](/docs/migration/other) to get started.
+::: warning Je viens d'un autre framework
+Migration à partir d'un autre framework ? [LISEZ CECI](/docs/migration/other) pour démarrer.
 :::
 
-- [Quickstart](#quickstart)
-- [Breaking Changes](#breaking-changes)
-- [Notable New Features](#notable-new-features)
+- [Démarrage rapide](#quickstart)
+- [Changements](#breaking-changes)
+- [Nouvelles fonctionnalités importantes](#notable-new-features)
 <!-- - [Supporting Libraries](#supporting-libraries) -->
 
 <!-- ## Overview
@@ -28,19 +28,19 @@ Migrating from another framework? [READ THIS](/docs/migration/other) to get star
 
 Start learning Leaf 3 at [Leaf Mastery](https://www.Leafmastery.com/courses-path/Leaf3). -->
 
-## Quickstart
+## Démarrage rapide
 
-If you want to quickly try out Leaf 3 in a new project, create a folder and run:
+Si vous voulez rapidement créer uun nouveau projet avec Leaf 3, créez un dossier et exécutez :
 
 ```sh
 composer require leafs/leaf
 ```
 
-This will quickly setup a leaf 3 with the default modules. From there, create your `index.php` file and add this quickstart.
+Cela permettra de configurer rapidement Leaf 3 avec les modules par défaut. A partir de là, créez votre fichier `index.php` et ajoutez ce code.
 
 <div class="functional-mode">
 
-When using functional mode:
+En utilisant le mode Fonctionnel :
 
 ```php
 <?php
@@ -57,7 +57,7 @@ app()->run();
 </div>
 <div class="class-mode">
 
-When using classes:
+En utilisant le mode Classe :
 
 ```php
 <?php
@@ -75,86 +75,88 @@ $app->run();
 
 </div>
 
-You can run this with the built in php server
+Vous pouvez ensuite le serveur PHP intégré
 
 ```sh
 php -S localhost:5500
 ```
 
-Alternatively, you can use the Leaf CLI:
+Vous pouvez aussi utiliser Leaf CLI:
 
 ```sh
 leaf create <app-name> --v3
 ```
 
-And run the sample app with:
+Et lancez votre application avec :
 
 ```sh
 leaf serve
 ```
 
-### Migrating from leaf 2
+### Migration depuis Leaf 2
 
-As mentioned before, we've made leaf 3 as backwards compatible with Leaf 2.5+ as possible. This means that moving from v2 to v3 will be a breeze or close.
+Comme nous l'avons déjà mentionné, nous avons rendu Leaf 3 aussi rétrocompatible que possible avec Leaf 2.5+. Cela signifie que le passage de la v2 à la v3 sera un jeu d'enfant, ou presque.
 
-- Install leaf 3
+- Installez Leaf 3
 
 ```sh
 composer require leafs/leaf
 ```
 
-Or with leaf CLI
+Ou avec Leaf CLI
 
 ```sh
 leaf install leaf
 ```
 
-::: tip Watch out
-You should probably delete your `vendor` folder and `package-lock.json` before running the command above to make sure that all the dependencies are accurately reinstalled.
+::: tip Attention
+Vous devriez probablement supprimer votre dossier `vendor` et `package-lock.json` avant d'exécuter la commande ci-dessus pour vous assurer que toutes les dépendances sont correctement réinstallées.
 :::
 
-- After this, it's just a matter of installing the modules required in your project.
-For example, if you use `Leaf\Auth`, you will need to install the auth module. This can be done with:
+- Après cela, il s'agit juste d'installer les modules requis dans votre projet.
+Par exemple, si vous utilisez `Leaf\Auth`, vous devrez installer le module **auth**.
+
+Cela peut être fait avec :
 
 ```sh
 leaf install auth
 ```
 
-Or with composer:
+Ou avec Composer:
 
 ```sh
 composer require leafs/auth
 ```
 
-Just do this for all other modules in your project. And your app should be back online, working even faster than before.
+Faites de même pour tous les autres modules de votre projet. Votre application devrait être de nouveau sur pied et fonctionner encore plus rapidement qu'avant.
 
-## Breaking Changes
+## Changements
 
-The following consists a list of breaking changes from 2.x:
+Ce qui suit consiste en une liste de changements par rapport à la version 2.x :
 
 ### Modules
 
-Leaf 3 only retains the core of the framework with a few utilities, all other features were packaged as modules. This means that you will have errors if you try to use some packages like `Leaf\Auth` or `Leaf\Flash` without installing them first.
+Leaf 3 ne conserve que le noyau du framework avec quelques utilitaires, toutes les autres fonctionnalités ont été empaquetées comme des modules. Cela signifie que vous aurez des erreurs si vous essayez d'utiliser certains paquets comme `Leaf\Auth` ou `Leaf\Flash` sans les avoir installés au préalable.
 
-This is not really a problem since installing the module will automatically fix any problems that came along with it's abscence.
+Ce n'est pas vraiment un problème puisque l'installation dudit module résout automatiquement tous les problèmes liés à son absence.
 
 ### CORS
 
-In v2, some basic cors configuration was available on the Leaf object, however, this has been discontinued and replaced with the Cors module. This module contains both basic and advanced CORS configurations and is inspired by the ExpressJS cors package. So if you have any experience with that library, you will have no problems using the leaf cors module.
+Dans la v2, une configuration de base du CORS était disponible sur l'objet Leaf, mais elle a été abandonnée et remplacée par le module **cors**. Ce module contient des configurations CORS de base et avancées et s'inspire du package cors d'ExpressJS. Ainsi, si vous avez de l'expérience avec cette bibliothèque, vous n'aurez aucun problème à utiliser le module cors de Leaf.
 
-To fix any problems with cors in your Leaf 2 app, follow these steps:
+Pour résoudre les problèmes de cors dans votre application Leaf 2, suivez ces étapes :
 
-- Install the cors module
+- Installez le module **cors**
 
 ```sh
 composer require leafs/cors
 ```
 
-- Replace the original cors configuration with the cors module. (This is done under the hood for you, all you need to do now call the cors method on your leaf app)
+Remplacez la configuration originale de cors par le module cors. (Ceci est fait sous le capot pour vous, tout ce que vous avez à faire maintenant est d'appeler la méthode cors dans votre application Leaf).
 
 <div class="class-mode">
 
-Replace this:
+Remplacez ceci :
 
 ```php
 $app = new Leaf\App;
@@ -164,7 +166,7 @@ $app->evadeCors(true);
 // ...
 ```
 
-with...
+par...
 
 ```php
 $app = new Leaf\App;
@@ -177,7 +179,7 @@ $app->cors();
 </div>
 <div class="functional-mode">
 
-Replace this:
+Remplacez ceci :
 
 ```php
 app()->evadeCors(true);
@@ -185,7 +187,7 @@ app()->evadeCors(true);
 // ...
 ```
 
-with...
+par...
 
 ```php
 app()->cors();
@@ -195,15 +197,15 @@ app()->cors();
 
 </div>
 
-The cors method is automatically linked to the cors module by Leaf and so, no extra configuration is needed to make it work. Cors takes in some optional configuration, checkout the [cors module docs](/modules/cors/). Also cors is no longer available on the response object.
+La méthode cors est automatiquement liée au module cors par Leaf et donc, aucune configuration supplémentaire n'est nécessaire pour la faire fonctionner. Cors prend en compte certaines configurations optionnelles, consultez la [doc du module cors](/modules/cors/). De plus, cors n'est plus disponible sur l'objet Response.
 
-### Router
+### Routeur
 
-`Leaf\Router::getRequestMethod` has been been moved to `Leaf\Http\Request::getMethod`. This is used in Leaf's core and should not be an issue, but if you do have references to this function, changing it to `Leaf\Http\Request::getMethod` will fix any errors.
+`Leaf\Router::getRequestMethod` a été déplacé vers `Leaf\Http\Request::getMethod`. Cette fonction est utilisée dans le noyau de Leaf et ne devrait pas poser de problème. Cependant, si vous avez des références à cette fonction et l'utilisez dans votre application, changer vos références avec `Leaf\Http\Request::getMethod` corrigera toute erreur.
 
-## Notable New Features
+## Nouvelles fonctionnalités importantes
 
-Some of the new features to keep an eye on in Leaf 3 include:
+Voici quelques-unes des nouvelles fonctionnalités de Leaf 3 sur lesquelles garder un œil :
 
-- [Global functions](/docs/tooling/functions)
-- [CORS module](/modules/cors/)
+- [Fonctions globales](/docs/tooling/functions)
+- [Module CORS](/modules/cors/)
