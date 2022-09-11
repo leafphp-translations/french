@@ -1,14 +1,14 @@
 <!-- markdownlint-disable no-inline-html -->
 
-# URL Rewriting
+# Réécriture d'URL
 
 <script setup>
 import VideoDocs from '/@theme/components/VideoDocs.vue'
 </script>
 
-Basically, we're trying to push all the requests made to the server to a single root file, so a request made to `/home.php` will be directed to the root file of our choice....usually `index.php`.
+En gros, nous essayons de pousser toutes les requêtes faites au serveur vers un seul fichier racine, donc une requête faite à `/home.php` sera dirigée vers le fichier racine de notre choix.... habituellement `index.php`.
 
-This complex sounding feature can be achieved by adding a web server configuration depending on your server of choice.
+Cette fonction qui semble complexe peut être réalisée en configurant le serveur web de votre choix.
 
 <!-- <VideoDocs
   subject="Watch URL rewriting explained on youtube"
@@ -18,7 +18,7 @@ This complex sounding feature can be achieved by adding a web server configurati
 
 ## Apache - .htaccess
 
-This is a basic example of an htaccess file. It basically re-routes all requests to our index.php file.
+Voici un exemple de base d'un fichier htaccess. Pour résumer, il redirige toutes les requêtes vers notre fichier `index.php`.
 
 ```htaccess
 RewriteEngine on
@@ -27,17 +27,17 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
 ```
 
-Save as `.htaccess` in your the same directory as your "root file"
+Sauvegardez le fichier `.htaccess` dans le même répertoire que votre "fichier racine".
 
 ## Nginx - nginx.conf
 
-A basic example with nginx web server
+Un exemple de base avec un serveur web nginx :
 
 ```nginx
 try_files $uri /index.php;
 ```
 
-You can read below for an overview of url rewriting.
+Vous pouvez accéder via les liens ci-dessous à un aperçu de la réécriture d'url.
 
-- [Intro to URL rewriting](https://www.smashingmagazine.com/2011/11/introduction-to-url-rewriting/)
-- [.htaccess and nginx.conf variations](https://gist.github.com/bramus/5332525)
+- [Introduction à la réécriture d'URL](https://www.smashingmagazine.com/2011/11/introduction-to-url-rewriting/)
+- [Variations entre .htaccess et nginx.conf](https://gist.github.com/bramus/5332525)
