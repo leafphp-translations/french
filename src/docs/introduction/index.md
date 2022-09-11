@@ -171,7 +171,7 @@ Contrairement à la confusion ci-dessus entre le type de contenu et echo, la `re
 
 ## Mode Fonctionnel
 
-Nous avons surtout parlé des caractéristiques générales qui sont les mêmes que dans Leaf 2, parlons maintenant de quelques fraicheurs de Leaf 3.
+Nous avons surtout parlé des caractéristiques générales qui sont les mêmes que dans Leaf 2, parlons maintenant de quelques nouveautés de Leaf 3.
 
 ::: tip
 Ceci est seulement une introduction au mode fonctionnel. Lisez la [documentation du mode fonctionnel](/docs/tooling/functions.html) pour en savoir plus.
