@@ -1,20 +1,20 @@
-# Your first app
+# Votre première application
 
-::: tip Pre-requisites
+::: tip Prérequis
 
-- Basic PHP knowledge
+- Connaissances de base en PHP
 
 :::
 
-This is an interactive tutorial to help you get started with leaf, right from installation to building your first leaf 3 app. This tutorial will require basic PHP knowledge with an optional knowledge on APIs.
+Il s'agit d'un tutoriel interactif pour vous aider à démarrer, de l'installation à la création de votre première application Leaf 3. Ce tutoriel nécessite des connaissances de base en PHP et, en option, des connaissances sur les APIs.
 
-## Getting started
+## Pour démarrer
 
 ::: tip Leaf CLI
-We recommend using the [Leaf CLI](https://cli.leafphp.dev) for creating and managing your Leaf projects.
+Nous vous recommandons d'utiliser [Leaf CLI] (https://cli.leafphp.dev) pour créer et gérer vos projets Leaf.
 :::
 
-To get started, we will need to generate a leaf application. We can do this simply with Leaf CLI:
+Pour commencer, nous devons générer une application Leaf. Nous pouvons le faire simplement via Leaf CLI :
 
 ```sh
 leaf create <your-project-name> --basic --v3
@@ -34,19 +34,19 @@ Scaffolding project in ./<your-project-name>...
 Done.
 ``` -->
 
-Or with composer:
+Ou avec Composer :
 
 ```sh
 composer require leafs/leaf
 ```
 
-After this, you will need to create an `index.php` file. *This is already done for you if you used Leaf CLI.*
+Après cela, vous devrez créer un fichier `index.php`. *Ceci est déjà fait pour vous si vous avez utilisé Leaf CLI.*
 
-## Your app starter
+## Le démarreur de votre application
 
-Now that leaf is installed, you will need a file which will serve as the root of your project. Leaf uses a single root file, to which all routes are sent to. Leaf then takes the route and calls the related handler for it. You can read more in the [routing docs](/docs/routing/).
+Maintenant que Leaf est installé, vous aurez besoin d'un fichier qui servira de racine à votre projet. Leaf utilise un seul fichier racine, vers lequel toutes les routes sont envoyées. Leaf prend alors la route et appelle le gestionnaire correspondant. Vous pouvez en lire plus dans la [doc sur le routage](/docs/routing/).
 
-Your starter file will import leaf and hold your routes.
+Votre fichier de démarrage importera Leaf et contiendra vos routes.
 
 ```php
 <?php
@@ -54,22 +54,22 @@ Your starter file will import leaf and hold your routes.
 require __DIR__ . '/vendor/autoload.php';
 ```
 
-This above sort of imports our installed dependencies and allows us to use them without `require`ing or `include`ing them one by one.
+Ce qui précède importe en quelque sorte nos dépendances installées et nous permet de les utiliser sans les `require` ou les `include` une par une.
 
-From there, we can start building our app.
+A partir d'ici, nous pouvons commencer à construire notre application.
 
 <div class="class-mode">
 
-Let's define a dummy route.
+Définissons une route pour essayer.
 
 ```php{3-5}
 $app = new Leaf\App();
 
 $app->get('/', function () {
-  echo 'something';
+  echo 'Un petit message';
 });
 
-// don't forget to call `run`
+// n'oubliez pas d'appeler la méthode `run`
 $app->run();
 ```
 
@@ -77,46 +77,46 @@ $app->run();
 
 <div class="functional-mode">
 
-We would normally need to initialize leaf, however, with with the introduction of functional mode, we don't need to do this. We can go straight to building our app.
+Normalement, nous devrions initialiser Leaf, cependant, avec l'arrivée du mode Fonctionnel, nous n'avons pas besoin de le faire. Nous pouvons passer directement à la construction de notre application.
 
-Let's define a dummy route.
+Définissons une route pour essayer.
 
 ```php{1-3}
 app()->get('/', function () {
-  echo 'something';
+  echo 'Un petit message';
 });
 
-// don't forget to call `run`
+// n'oubliez pas d'appeler la méthode `run`
 app()->run();
 ```
 
 </div>
 
-Defining a route is that simple with leaf. In this case, we just defined the `GET /` route. We can simply run this with `leaf serve` if you use the leaf CLI or `php -S localhost:[PORT]`.
+Définir une route est aussi simple que cela avec Leaf. Ici, nous avons juste défini la route `GET /`. Nous pouvons maintenant exécuter notre application avec `leaf serve` si vous utilisez Leaf CLI,  ou bien avec le serveur intégré `php -S localhost:[PORT]`.
 
-## Our app
+## Notre application
 
-Now that we've gotten our hello world setup complete, we can get started with our application. We will build a simple note taking app which will allow us create and fetch notes from a database.
+Maintenant que nous avons terminé la configuration de notre "Hello world", nous pouvons commencer notre application. Nous allons construire une application simple de prise de notes qui nous permettra de créer et de récupérer des notes depuis une base de données.
 
 ## Modules
 
-Modules are pieces of leaf's functionality which are served as installable plugins. They were created in an attempt to stop leaf from bloating like other frameworks. This means that you can have only what you need in your app, and always extend Leaf's power on demand.
+Les modules sont des morceaux de fonctionnalités de Leaf qui sont proposés comme des plugins installables. Ils ont été créés dans le but d'empêcher Leaf de s'encrasser comme d'autres frameworks. Cela signifie que vous pouvez avoir seulement ce dont vous avez besoin dans votre application, et toujours étendre la puissance de Leaf en fonction de ce que vous voulez faire.
 
-As you will see, modules are installed using the Leaf CLI or composer. For this app, we'll be using the `db` module to access our database.
+Comme vous le verrez, les modules sont installés à l'aide de Leaf CLI ou de Composer. Pour cette application, nous allons utiliser le module `db` pour accéder à notre base de données.
 
-## Getting our notes
+## Récupérer nos notes
 
-### Creating our route
+### Création de notre route
 
-To get started with this step, we need to create a GET route which will return all the notes in our database. Since we already know how to create routes like the one above, this step is pretty simple.
+Pour commencer cette étape, nous devons créer une route en GET qui renverra toutes les notes de notre base de données. Comme nous savons déjà comment créer des routes comme celle de l'exemple ci-dessus, cette étape est assez simple.
 
 <div class="class-mode">
 
 ```php
 $app->get('/notes', function () {
-  // fetch all notes from the database
-  // output notes as JSON
-  echo 'all notes';
+  // récupère toutes les notes de la base
+  // renvoie les notes en JSON
+  echo 'Toutes les notes';
 });
 ```
 
@@ -126,35 +126,35 @@ $app->get('/notes', function () {
 
 ```php
 app()->get('/notes', function () {
-  // fetch all notes from the database
-  // output notes as JSON
-  echo 'all notes';
+  // récupère toutes les notes de la base
+  // renvoie les notes en JSON
+  echo 'Toutes les notes';
 });
 ```
 
 </div>
 
-### Fetching notes
+### Récupération des notes
 
-As mentioned above, we will use the db module to access our database. Leaf DB has made database operations really simple and accessible to everyone. You don't even need knowledge on SQL to use Leaf DB.
+Comme mentionné ci-dessus, nous allons utiliser le module **db** pour accéder à notre base de données. Leaf DB a rendu les opérations de base de données vraiment simples et accessibles à tous. Vous n'avez même pas besoin de connaissances en SQL pour l'utiliser.
 
-#### Installing leaf db
+#### Installation du module **db**
 
-To install the db module, we can use the Leaf CLI.
+Pour installer le module **db**, nous allons utiliser Leaf CLI
 
 ```sh
 leaf install db
 ```
 
-You can also use composer:
+Vous pouvez aussi le faire via Composer :
 
 ```sh
 composer require leafs/db
 ```
 
-#### Connecting to our db
+#### Connexion à notre base de données
 
-From there, we can head back inside our app and connect to our database.
+Une fois le module installé, nous pouvons retourner dans notre application et nous connecter à notre base de données.
 
 <div class="class-mode">
 
@@ -173,13 +173,13 @@ db()->connect('127.0.0.1', 'dbname', 'username', 'password');
 
 </div>
 
-We can place this before before our routes so we can use the `$db` variable everywhere.
+Nous pouvons placer ce code avant nos routes, afin de pouvoir utiliser la variable `$db` partout.
 
-#### Using the db module
+#### Utilisation du module **db**
 
-<div class="class-mode">Back in our route, we can pass the `$db` variable into scope and get started with it. You can check the [db module docs](/modules/db/) for more info.</div>
+<div class="class-mode">De retour dans notre route, nous pouvons passer la variable `$db` et commencer à l'utiliser. Vous pouvez consulter la [doc du module db](/modules/db/) pour plus d'informations.</div>
 
-What we want to do here is retrieve all the data from our notes table, we can do this simply using `select`. This is a method provided by leaf db which allows us run the SQL `Select` command.
+Ce que nous voulons faire ici est de récupérer toutes les données de notre table notes, nous pouvons le faire simplement en utilisant `select`. C'est une méthode fournie par leaf db qui nous permet d'exécuter la commande SQL `SELECT`.
 
 <div class="class-mode">
 
@@ -189,13 +189,14 @@ $db = new Leaf\Db;
 
 $db->connect('127.0.0.1', 'dbname', 'username', 'password');
 
-// pass db into the callback using `use`
+// on passe la variable $db en callback avec `use`
 $app->get('/notes', function () use($db) {
-  // fetch all notes from the database
+  
+  // on récupère toutes les notes de la base
   $notes = $db->select('notes')->all();
 
-  // output notes as JSON
-  echo 'all notes';
+  // on renvoie les notes sous forme de JSON
+  echo 'Toutes les notes';
 });
 ```
 
@@ -207,23 +208,24 @@ $app->get('/notes', function () use($db) {
 db()->connect('127.0.0.1', 'dbname', 'username', 'password');
 
 app()->get('/notes', function () {
-  // fetch all notes from the database
+
+  // on récupère toutes les notes de la base
   $notes = db()->select('notes')->all();
 
-  // output notes as JSON
-  echo 'all notes';
+  // on renvoie les notes sous forme de JSON
+  echo 'Toutes les notes';
 });
 ```
 
 </div>
 
-Now that we've been able to retrieve our data from the database, let's see how we can output this data.
+Maintenant que nous avons été en mesure de récupérer nos données dans la base de données, voyons comment nous pouvons afficher ces données.
 
-### The response object
+### L'objet Response
 
-The response object is leaf's library for handling the way data flows out of your application. It has a very simple and easy to use interface <span class="functional-mode">, and with functional mode, it can be used from anywhere in your app without initilaizing it</span>.
+L'objet Response est une librairie permettant de gérer la manière dont les données sortent de votre application. Son interface est simple et facile d'utilisation<span class="functional-mode">, et avec le mode Fonctionnel, il peut être utilisé n'importe où dans votre application, sans avoir à l'initialiser</span>.
 
-In the lines above, we retrieved our data from the database. Now all that's left is to output this data as JSON. We can do this simply by calling `json` on the response object.
+Dans les lignes ci-dessus, nous avons récupéré nos données depuis la base de données. Maintenant, tout ce qui nous reste à faire est de renvoyer ces données en JSON. Nous pouvons le faire simplement en appelant la méthode `json` sur l'objet Response.
 
 <div class="class-mode">
 
@@ -254,7 +256,7 @@ app()->get('/notes', function () {
 
 </div>
 
-This will output JSON
+Ce qui produira le retour d'un JSON :
 
 ```json
 {
@@ -263,19 +265,19 @@ This will output JSON
 }
 ```
 
-## Saving our notes
+## Sauvegarder nos notes
 
-We need to create another route to handle adding new notes. In this case, we will create a POST route, meaning you will need to create a POST request to access it. This can be done using an HTTP client of some sort.
+Nous devons créer une autre route pour gérer l'ajout de nouvelles notes dans la base de données. Dans ce cas, nous allons créer une route accessible en POST, ce qui signifie que vous devrez créer une requête POST pour y accéder. Cela peut être fait en utilisant un client HTTP quelconque.
 
-This new route will take some data into our application and then select only what we need to be saved in the database, and finally return a message.
+Cette nouvelle route prendra certaines données de notre application, puis sélectionnera uniquement ce qui doit être sauvegardé dans la base de données, et enfin renverra un message.
 
 <div class="class-mode">
 
 ```php
 $app->post('/notes/new', function () use($db) {
-  // get data from request
-  // save items
-  // return success message
+  // obtenir les données à partir de la requête
+  // sauvegarder les données dans la base
+  // renvoyer un message de succès
 });
 ```
 
@@ -284,17 +286,17 @@ $app->post('/notes/new', function () use($db) {
 
 ```php
 app()->post('/notes/new', function () {
-  // get data from request
-  // save items
-  // return success message
+  // obtenir les données à partir de la requête
+  // sauvegarder les données dans la base
+  // renvoyer un message de succès
 });
 ```
 
 </div>
 
-### The request object
+### L'objet Request
 
-Just as we saw with the response object, Leaf also provides a request object which allows us to quickly and securely get data which flows into our application.
+Comme nous l'avons vu avec l'objet Response, Leaf fournit également un objet Request qui nous permet d'obtenir rapidement et en toute sécurité les données qui entrent dans notre application.
 
 <div class="class-mode">
 
@@ -311,9 +313,9 @@ $item = request()->get('item');
 
 </div>
 
-This line will get data with the key `item` passed into the app from a form, url or any other data and save it in the `$item` variable. In this case, our app will accept `title`, `body` and `date` which we will save in the database.
+Cette ligne va récupérer des données avec la clé `item` passée dans l'application depuis un formulaire, une url ou toute autre donnée et les sauvegarder dans la variable `$item`. Dans ce cas, notre application va accepter `title`, `body` et `date` que nous allons sauvegarder dans la base de données.
 
-To do this, we can retrieve them one by one as we did above, but leaf provides an easier way.
+Pour ce faire, nous pouvons les récupérer un par un comme nous l'avons fait ci-dessus, mais Leaf propose une méthode plus simple.
 
 <div class="class-mode">
 
@@ -330,11 +332,11 @@ $data = request()->get(['title', 'body', 'date']);
 
 </div>
 
-With this, all other data passed in our app will be ignored, but will still be available for use.
+Ainsi, toutes les autres données transmises dans notre application seront ignorées, mais resteront disponibles pour être utilisées.
 
-### Saving data in the db
+### Sauvegarde des données dans la base
 
-To save the data in the database, we will use leaf db as we did above. This time, the `insert` method instead.
+Pour sauvegarder les données dans la base de données, nous allons utiliser le module **db** comme nous l'avons fait ci-dessus. Cette fois, nous utiliserons la méthode `insert` à la place.
 
 <div class="class-mode">
 
@@ -351,21 +353,21 @@ db()->insert('notes')->params($data)->execute();
 
 </div>
 
-`execute` is used on commands which don't return any value like `insert` and `update`.
+`execute` est utilisé pour les commandes qui ne retournent aucune valeur comme `insert` et `update`.
 
-Putting it all together, we'll have this:
+Si nous récapitulons, nous avons :
 
 <div class="class-mode">
 
 ```php
 $app->post('/notes/new', function () use($app, $db) {
-  // get data from request
+  // obtenir les données à partir de la requête
   $data = $app->request()->get(['title', 'body', 'date']);
 
-  // save items
+  // sauvegarder les données dans la base
   $db->insert('notes')->params($data)->execute();
 
-  // return success message
+  // renvoyer un message de succès
   $app->response()->json([
     'status' => 'success',
     'message' => 'Notes saved'
@@ -378,13 +380,13 @@ $app->post('/notes/new', function () use($app, $db) {
 
 ```php
 app()->post('/notes/new', function () {
-  // get data from request
+  // obtenir les données à partir de la requête
   $data = request()->get(['title', 'body', 'date']);
 
-  // save items
+  // sauvegarder les données dans la base
   db()->insert('notes')->params($data)->execute();
 
-  // return success message
+  // renvoyer un message de succès
   response()->json([
     'status' => 'success',
     'message' => 'Notes saved'
@@ -394,7 +396,7 @@ app()->post('/notes/new', function () {
 
 </div>
 
-## Putting it all together
+## Mise en place globale
 
 <div class="class-mode">
 
@@ -466,4 +468,4 @@ app()->run();
 
 </div>
 
-Building is this simple with leaf, as you can see, we've built a note taking app in less than 30 lines of code.
+Comme vous pouvez le constater, nous avons créé une application de prise de notes en moins de 30 lignes de code avec Leaf !
